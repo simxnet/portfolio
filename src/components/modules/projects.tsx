@@ -22,9 +22,7 @@ export default function Projects() {
 			<Flex justifyContent={"space-between"} alignItems={"center"}>
 				<Flex gap={5} alignItems={"center"}>
 					<img
-						src={
-							(pr.fields.Logo as unknown as { url: string }[])[0].url as string
-						}
+						src={pr.fields.Logo as string}
 						alt=""
 						className={css({
 							rounded: "xl",
