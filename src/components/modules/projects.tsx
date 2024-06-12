@@ -6,7 +6,7 @@ import { listAirtableProjects } from "@/lib/api/airtable/list-records";
 import { Flex } from "@/styled-system/jsx";
 import { Card } from "../ui/card";
 import { css } from "@/styled-system/css";
-import { Badge } from "../ui/badge";
+import { Badge, type BadgeVariants } from "../ui/badge";
 
 export default function Projects() {
 	const { data, isLoading } = useQuery({
@@ -22,7 +22,7 @@ export default function Projects() {
 			<Flex justifyContent={"space-between"} alignItems={"center"}>
 				<Flex gap={5} alignItems={"center"}>
 					<img
-						src={pr.fields.Logo as string}
+						src={pr.fields.Logo}
 						alt=""
 						className={css({
 							rounded: "xl",
@@ -32,23 +32,18 @@ export default function Projects() {
 						})}
 					/>
 					<Flex flexDir={"column"}>
-						<h3 className={css({ fontSize: "lg" })}>
-							{pr.fields.Name as string}
-						</h3>
+						<h3 className={css({ fontSize: "lg" })}>{pr.fields.Name}</h3>
 						<p className={css({ fontWeight: 400, fontSize: "sm" })}>
-							{pr.fields.Description as string}
+							{pr.fields.Description}
 						</p>
 					</Flex>
 				</Flex>
 				<Badge
-					status={
-						(pr.fields.Status as string).toLowerCase() as
-							| "done"
-							| "beta"
-							| "sunsetted"
+					language={
+						pr.fields.Language.toLowerCase() as NonNullable<BadgeVariants>["language"]
 					}
 				>
-					{pr.fields.Status as string}
+					{pr.fields.Language}
 				</Badge>
 			</Flex>
 		</Card>

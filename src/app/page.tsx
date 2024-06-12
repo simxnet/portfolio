@@ -6,7 +6,7 @@ import { Flex, Grid } from "@/styled-system/jsx";
 
 export default function Home() {
 	return (
-		<Flex flexDirection="column" gap={4}>
+		<Flex flexDirection="column" gap={4} mb={5}>
 			<Flex justifyContent={"space-between"} alignItems={"center"}>
 				<Flex flexDirection="column">
 					<h1 className={css({ fontSize: "4xl" })}>
@@ -24,13 +24,13 @@ export default function Home() {
 			</Flex>
 			<Flex flexDir={"column"} gap={2}>
 				<h1 className={css({ fontSize: "2xl" })}>My status</h1>
-				<Grid gridTemplateColumns={2} gap={4}>
+				<Flex w={"full"} gap={4}>
 					<Status />
 					<Spotify />
-				</Grid>
+				</Flex>
 			</Flex>
 			<Flex flexDir={"column"} gap={2}>
-				<h1 className={css({ fontSize: "2xl" })}>My projects</h1>
+				<h1 className={css({ fontSize: "2xl" })}>Featured projects</h1>
 				<Grid gridTemplateColumns={2} gap={4}>
 					<Projects />
 				</Grid>
