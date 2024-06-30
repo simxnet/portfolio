@@ -1,18 +1,18 @@
 import type { AirtableProject } from "@/lib/airtable/api";
-import { Grid, GridItem, HStack, VStack } from "@/styled-system/jsx";
-import { Heading } from "../ui/heading";
-import { Card } from "../ui/card";
-import { Text } from "../ui/text";
-import Image from "next/image";
 import { css } from "@/styled-system/css";
-import { Badge } from "../ui/badge";
-import Link from "next/link";
+import { Grid, GridItem, HStack, VStack } from "@/styled-system/jsx";
 import {
 	IconBrandRust,
 	IconBrandTypescript,
 	IconMoonFilled,
 } from "@tabler/icons-react";
+import Image from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
+import { Badge } from "../ui/badge";
+import { Card } from "../ui/card";
+import { Heading } from "../ui/heading";
+import { Text } from "../ui/text";
 
 const langColors: Record<
 	string,

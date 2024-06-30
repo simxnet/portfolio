@@ -1,8 +1,8 @@
 import type { LanyardResponse } from "@/lib/lanyard/lanyard";
 import { HStack, VStack } from "@/styled-system/jsx";
+import Image from "next/image";
 import { Span } from "../ui/span";
 import { Text } from "../ui/text";
-import Image from "next/image";
 
 export default function Status({
 	spotify,

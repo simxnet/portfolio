@@ -1,4 +1,4 @@
-import { lanyard, type LanyardResponse } from "./lanyard";
+import { type LanyardResponse, lanyard } from "./lanyard";
 
 export async function getDiscordStatus(): Promise<LanyardResponse> {
 	return lanyard<LanyardResponse>(`/users/${process.env.NEXT_PUBLIC_USER_ID}`);
