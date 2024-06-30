@@ -13,6 +13,7 @@ import {
 import { HStack, VStack } from "@/styled-system/jsx";
 
 export const fetchCache = "force-no-store";
+export const dynamic = "force-dynamic";
 
 export default async function Page() {
 	const {

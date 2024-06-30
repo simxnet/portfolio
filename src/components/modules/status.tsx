@@ -44,7 +44,7 @@ export default function Status({
 					<Text>
 						Working on{" "}
 						<Span fontWeight={"bold"} color="white">
-							{code.state}
+							{code.state ?? "some project"}
 						</Span>
 					</Text>
 				) : (
