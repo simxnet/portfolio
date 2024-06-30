@@ -8,9 +8,8 @@ import "@/styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Next.js template",
-	description:
-		"Production-ready Next.js template powered by PandaCSS and HeadlessUI.",
+	title: "simxnet",
+	description: "Developer",
 };
 
 export default function RootLayout({
